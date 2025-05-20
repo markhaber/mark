@@ -1,0 +1,145 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark's Chill Brew Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- First Section: Text-Based Menu -->
+    <div class="menu-container">
+        <h1>HABER CAFE MENU</h1>
+        <table>
+            <tr>
+                <th>Drinks</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Coffee</td>
+                <td>46</td>
+            </tr>
+            <tr>
+                <td>Ice Tea</td>
+                <td>54</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Orange Juice</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Ice Coffee</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Coffee Mocha</td>
+                <td>56</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Second Section: Graphical Product Page -->
+    <div class="product-container">
+        <h1>Welcome to Mark's Chill Brew Cafe</h1>
+        <div class="product-grid">
+                 <body class="bg-black flex items-center justify-center min-h-screen p-4">
+                  <img alt="Blue coffee cup with latte art on a wooden table, with a silver spoon on the blue saucer" class="max-w-full h-auto object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/62b4a9ce-ea29-4631-0e0a-ddebec58ce69.jpg" width="300"/>
+                <h1>Coffee</h1>
+            </div>
+            <body class="bg-black flex items-center justify-center min-h-screen">
+                <img alt="A clear glass filled with iced tea and several ice cubes inside, condensation visible on the glass, set against a black background" class="max-w-xs w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/1aef82ce-9b82-44d3-2f78-9119f010202d.jpg" width="300"/>
+                <h1>Ice Tea</h1>
+            </div>
+             <body class="bg-white flex items-center justify-center min-h-screen p-4">
+                <img alt="Close-up photo of a clear glass mug filled with hot chocolate topped with white marshmallows and chocolate shavings, placed on a light surface with some marshmallows and chocolate shavings scattered around, with a second similar mug blurred in the background" class="max-w-full h-auto rounded-md shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/45cab8f6-39ee-45a5-dd53-9884573dd786.jpg" width="300"/>
+                <h1>Hot Chocolate</h1>
+            </div>
+             <body class="bg-black flex items-center justify-center min-h-screen p-4">
+                  <img alt="Clear glass filled with orange juice on a brown wooden table with a wooden tray holding orange slices in the background" class="max-w-full h-auto object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/a875ed98-db13-41a6-f401-1a89e8cc9bb4.jpg" width="300"/>     
+                  <h1>Orange Juice</h1>
+            </div>
+            <body class="bg-black flex items-center justify-center min-h-screen">
+                <img alt="Glass of iced coffee with ice cubes on a black background" class="max-w-xs w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/68980c3c-71d9-4b1b-d75f-487f1ab2f84d.jpg" width="300"/>
+                <h1>Ice Coffee</h1>
+            </div>
+            <body class="bg-white flex items-center justify-center min-h-screen p-4">
+                <img alt="Glass of iced chocolate drink with whipped cream and chocolate syrup dripping on the glass, placed on a white cloth with coffee beans scattered around" class="w-full h-auto rounded-md shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/4265690c-3be3-4e52-5946-51df0f53dc7d.jpg" width="300"/>
+                <h1>Coffee Mocha</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html><style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.menu-container {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.menu-container h1 {
+    margin-bottom: 1rem;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #555;
+}
+
+.product-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.product-grid-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.product-grid-item:hover {
+    transform: scale(1.05);
+}
+
+.product-grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}</style><script>document.addEventListener("DOMContentLoaded", () => {
+    const products = document.querySelectorAll('.product-grid-item');
+    products.forEach(product => {
+        product.addEventListener('click', () => {
+            alert(`You selected: ${product.querySelector('h1').textContent}`);
+        });
+    });
+});</script>
